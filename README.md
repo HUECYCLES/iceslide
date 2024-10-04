@@ -1,7 +1,7 @@
 this library allows you to slide on ice, like in Undertale!
 # Usage
 - extract the folder from the .zip and plop the library into your mod's libraries folder.
-- in your map, in the objects layer, make a rectangle and name it "icearea".
+- in your map, in the objects layer, make a rectangle and name it "icearea". you can add a string property to it named ``sound`` that will play a sound of your choice when you enter the event.
 - have fun sliding!
 
 # Notes
