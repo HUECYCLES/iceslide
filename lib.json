@@ -1,0 +1,26 @@
+{
+    "id": "iceslide",
+    "authors": [
+        "HUECYCLES",
+        "Nyako", // Thanks for the help!
+        "Kristal Devs" // This was built off of the SlideArea event.
+    ],
+    "version": "v1.0.2",
+    "engineVer": "v0.9.0",
+
+    "config": {
+        // In case you want to use custom animations for your iceslide.
+        // Just go into your actor path, and add a folder called "iceslide" with sprites that have the different directions.
+        // So the path will go like "iceslide/right", "iceslide/left", etc.
+        // If false, it'll default to the second frame of the default walk animation.
+        // [IMPORTANT] Even if your sprites aren't animations, define them in the actor's self.animations to make this work!
+        "use_custom_sprites": false,
+        // If you want to use the icetrail effect accompanied by a looping sound.
+        // You can change the sprites to your liking:
+        // "effects/icetrail" for horizontal movement and "effects/icetrail_b" for vertical.
+        "use_icetrail_and_sound": false,
+        // Sound to use if above option is true.
+        // Remember that this will be looped, so find a good sound for it!
+        "trailsound": "icetrail"
+    }
+}
