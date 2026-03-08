@@ -1,10 +1,29 @@
-this library allows you to slide on ice, like in Undertale!
-# Usage
-- extract the folder from the .zip and plop the library into your mod's libraries folder.
-- in your map, in the objects layer, make a rectangle and name it "icearea". you can add a string property to it named ``sound`` that will play a sound of your choice when you enter the event.
-- have fun sliding!
+This library allows you to slide on ice, like in Undertale! With a few additions...
 
-# Notes
-- the library has an option for adding custom sprites for the player and followers. if you want to use them, set use_custom_sprites in lib.json to true, and in your player/follower's actor folders, add a folder called iceslide, and inside of it add sprites named with different directions, like "left", "right", and so on. if false, the sprites used in the iceslide will default to the actor's default walk animation's second frame.
-- the library also has an option for leaving an icetrail behind the player and playing a looping sound. you can enable it and change the sprites to your liking (which are found in ``effects/icetrail`` and ``effects/icetrail_b``) + choose a sound to play.
-- this library does not check collisions. don't use it where you can collide with stuff. i don't think Undertale did it, so for now, i'm not gonna add collision checking.
+# Usage & Features
+- Extract the folder from the .zip and simply plop the library into your project's ``libraries`` folder.
+- In your map, in an ``objects`` layer, make a rectangle (or as many as you want) and name it "icearea".
+
+> [!TIP]
+> You can add a string property to it named ``sound`` that will play a sound of your choice whenever you enter the event.
+
+## Custom Sprites
+This library has an option for adding custom sprites or animations for the player and followers while sliding.
+
+If you want to use them, set ``use_custom_sprites`` in lib.json to true, and in your player/follower's actor folders, add a folder called ``iceslide``. Inside of it, add sprites/animations named different directions, like ``left``, ``right``, and so on.
+
+> [!NOTE]
+> If false, the sprites used in the slide will pick and choose between the actor's default walk animation's second and fourth frame.
+
+## IceTrail
+There are a few config options involved in leaving a trail behind the player while sliding.
+- ``trail``: If true, it will enable the trail.
+- ``trailsprite``: String containing the path to the sprite you want to use in the trail effect.
+- ``trailsprite_color``: Table with the RGB values for setting the sprite's color. Optional.
+- ``trailsprite_initial_scale``: Number indicating the initial scale of the sprite for the effect. Optional, defaults to ``1.2``.
+- ``use_trailsound``: If true, enables a looping sound that will play alongside the trail effect.
+- ``trailsound``: String containing the path to the sound you want to use.
+
+# Known Issues
+
+- This library **does not check collisions**. Don't use it where you can collide with stuff. (I don't think Undertale did it, so for now, I'm not gonna add collision checking...)
